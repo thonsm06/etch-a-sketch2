@@ -34,7 +34,10 @@ for (i = 0; i < gridWidth * gridHeight; i++){
     div.style.flexBasis = "auto";
     masterGrid.appendChild(div);
 }
-
-
+masterGrid.addEventListener("mouseover", (event) => {
+    let target = event.target;
+    console.log(target.id);
+    target.style.backgroundColor = "white";
+});
 document.body.appendChild(masterGrid);
 
